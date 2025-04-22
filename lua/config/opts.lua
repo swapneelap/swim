@@ -11,3 +11,5 @@ vim.opt.ignorecase = true
 
 -- activate true colour support
 vim.opt.termguicolors = true
+vim.g.mapleader = " "
+vim.g.maplocalleader = "\\"
