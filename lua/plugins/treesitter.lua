@@ -44,6 +44,15 @@ return {
 			"yaml",
 		},
 		auto_install = true,
+		incremental_selection = {
+			enable = true,
+			keymaps = {
+				init_selection = "<C-space>",
+				node_incremental = "<C-space>",
+				scope_incremental = "<C-s>",
+				node_decremental = "<bs>",
+			},
+		},
 	},
 	-- NOTE: unfortunately contrary to documentation on lazy.nvim:
 	-- https://lazy.folke.io/developers#best-practices,
