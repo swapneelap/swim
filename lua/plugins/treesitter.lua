@@ -45,6 +45,10 @@ return {
 		},
 		auto_install = true,
 	},
+	-- NOTE: unfortunately contrary to documentation on lazy.nvim:
+	-- https://lazy.folke.io/developers#best-practices,
+	-- one need to explicitly call the treesitter startup function
+	-- for the options to take effect!
 	config = function(_, opts)
 		require("nvim-treesitter.configs").setup(opts)
 	end,
