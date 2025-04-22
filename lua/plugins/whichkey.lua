@@ -4,6 +4,7 @@ return {
 	opts = {
 		spec = {
 			{ "<leader>l", "<cmd>Lazy<cr>", desc = "Open lazy nvim window", mode = "n" },
+			{ "<leader>ti", "<cmd>InspectTree<cr>", desc = "Inspect the AST by treesitter", mode = "n" },
 		},
 	},
 	keys = {
