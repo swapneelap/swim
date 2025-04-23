@@ -14,5 +14,13 @@ vim.opt.cursorline = true
 
 -- activate true colour support
 vim.opt.termguicolors = true
+
 vim.g.mapleader = " "
 vim.g.maplocalleader = "\\"
+
+vim.diagnostic.config({
+	float = {
+		scope = "line",
+		border = { "╔", "═", "╗", "║", "╝", "═", "╚", "║" },
+	},
+})
