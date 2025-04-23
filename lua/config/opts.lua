@@ -9,6 +9,9 @@ vim.opt.clipboard = "unnamedplus"
 -- igonre case in commands
 vim.opt.ignorecase = true
 
+-- highlight present line
+vim.opt.cursorline = true
+
 -- activate true colour support
 vim.opt.termguicolors = true
 vim.g.mapleader = " "
