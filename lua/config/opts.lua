@@ -19,8 +19,6 @@ vim.g.mapleader = " "
 vim.g.maplocalleader = "\\"
 
 vim.diagnostic.config({
-	float = {
-		scope = "line",
-		border = { "╔", "═", "╗", "║", "╝", "═", "╚", "║" },
-	},
+	virtual_text = false, -- due to `lsp_lines`
+	update_in_insert = true, -- hints while edit
 })

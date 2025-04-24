@@ -5,7 +5,7 @@ return {
 		spec = {
 			{ "<leader>l", "<cmd>Lazy<cr>", desc = "Open lazy nvim window", mode = "n" },
 			{ "<leader>ti", "<cmd>InspectTree<cr>", desc = "Inspect the AST by treesitter", mode = "n" },
-			{ "<leader>dd", "<cmd>lua vim.diagnostic.open_float()<cr>", desc = "Display diagnostics", mode = "n" },
+			{ "<leader>dd", "<cmd>lua require('lsp_lines').toggle()<cr>", desc = "Display diagnostics", mode = "n" },
 		},
 	},
 	keys = {
