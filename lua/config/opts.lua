@@ -22,3 +22,7 @@ vim.diagnostic.config({
 	virtual_text = false, -- due to `lsp_lines`
 	update_in_insert = true, -- hints while edit
 })
+
+-- recommended by nvim-tree
+vim.g.loaded_netrw = 1
+vim.g.loaded_netrwPlugin = 1

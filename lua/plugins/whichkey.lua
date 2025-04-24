@@ -28,6 +28,7 @@ return {
 				desc = "format file",
 				mode = "n",
 			},
+			{ "<leader>e", "<cmd>NvimTreeToggle<cr>", desc = "toggle explorer", mode = "n" },
 		},
 	},
 	keys = {
