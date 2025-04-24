@@ -10,7 +10,7 @@ return {
 				mode = "n",
 			},
 			{
-				"<leader>ti",
+				"<leader>i",
 				"<cmd>InspectTree<cr>",
 				desc = "inspect the AST by treesitter",
 				mode = "n",
@@ -29,6 +29,7 @@ return {
 				mode = "n",
 			},
 			{ "<leader>e", "<cmd>NvimTreeToggle<cr>", desc = "toggle explorer", mode = "n" },
+			{ "<leader>t", "<cmd>lua require('betterTerm').open()<cr>", desc = "terminal", mode = "n" },
 		},
 	},
 	keys = {
