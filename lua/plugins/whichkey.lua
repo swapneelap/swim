@@ -3,9 +3,11 @@ return {
 	event = "VeryLazy",
 	opts = {
 		spec = {
-			{ "<leader>l", "<cmd>Lazy<cr>", desc = "Open lazy nvim window", mode = "n" },
-			{ "<leader>ti", "<cmd>InspectTree<cr>", desc = "Inspect the AST by treesitter", mode = "n" },
-			{ "<leader>dd", "<cmd>lua require('lsp_lines').toggle()<cr>", desc = "Display diagnostics", mode = "n" },
+			{ "<leader>l",  "<cmd>Lazy<cr>",                              desc = "open lazy nvim window",         mode = "n" },
+			{ "<leader>ti", "<cmd>InspectTree<cr>",                       desc = "inspect the AST by treesitter", mode = "n" },
+			{ "<leader>b",  desc = "buffer options",                      mode = "n" },
+			{ "<leader>bd", "<cmd>lua require('lsp_lines').toggle()<cr>", desc = "display diagnostics",           mode = "n" },
+			{ "<leader>bf", "<cmd>lua vim.lsp.buf.format()<cr>",          desc = "format file",                   mode = "n" },
 		},
 	},
 	keys = {
