@@ -8,6 +8,7 @@ return {
 		require("everforest").setup({
 			background = "hard",
 			italics = true,
+			diagnostic_text_highlight = true,
 		})
 		-- load the colorscheme here
 		vim.cmd.colorscheme("everforest")
