@@ -6,9 +6,8 @@ return {
 	priority = 1000, -- make sure to load this before all the other start plugins
 	config = function()
 		require("everforest").setup({
-			background = "hard",
+			background = "medium",
 			italics = true,
-			diagnostic_text_highlight = true,
 		})
 		-- load the colorscheme here
 		vim.cmd.colorscheme("everforest")
