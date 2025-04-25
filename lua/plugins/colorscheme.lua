@@ -21,12 +21,20 @@ return {
 			-- "IlluminatedCurWord",  -- the word under the cursor
 			"IlluminatedWordText", -- @text objects
 			"IlluminatedWordRead", -- read-references
-			"IlluminatedWordWrite" -- write-references
+			"IlluminatedWordWrite", -- write-references
 		}
 
 		-- apply the same bg to each group:
 		for _, g in ipairs(groups) do
 			vim.api.nvim_set_hl(0, g, { bg = bg })
 		end
+
+		-- Fix: otherwise great, background sucks for Gitsigns hunks
+		local delete_in_line = "#E67E80"
+		local add_in_line = "#A7C080"
+		local text_color = "#232A2E"
+
+		vim.api.nvim_set_hl(0, "GitSignsDeleteInline", { fg = text_color, bg = delete_in_line })
+		vim.api.nvim_set_hl(0, "GitSignsAddInline", { fg = text_color, bg = add_in_line })
 	end,
 }
