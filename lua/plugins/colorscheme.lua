@@ -12,5 +12,22 @@ return {
 		})
 		-- load the colorscheme here
 		vim.cmd.colorscheme("everforest")
+
+		-- the only way to add background to the illuminated word
+		-- if the colorscheme does not support it.
+		local bg = "#3D484D"
+
+		-- list all of the illuminate groups to tweak:
+		local groups = {
+			-- "IlluminatedCurWord",  -- the word under the cursor
+			"IlluminatedWordText", -- @text objects
+			"IlluminatedWordRead", -- read-references
+			"IlluminatedWordWrite" -- write-references
+		}
+
+		-- apply the same bg to each group:
+		for _, g in ipairs(groups) do
+			vim.api.nvim_set_hl(0, g, { bg = bg })
+		end
 	end,
 }
