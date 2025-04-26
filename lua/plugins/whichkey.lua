@@ -36,7 +36,7 @@ return {
 			{ "<leader>ghh", "<cmd>Gitsigns preview_hunk<cr>", desc = "preview hunk", mode = "n" },
 			{ "<leader>ghn", "<cmd>Gitsigns nav_hunk next<cr>", desc = "next hunk", mode = "n" },
 			{ "<leader>ghp", "<cmd>Gitsigns nav_hunk prev<cr>", desc = "previous hunk", mode = "n" },
-			{ "<leader>ghs", "<cmd>Gitsigns stage_hunk<cr>", desc = "stage hunk", mode = "n" },
+			{ "<leader>gha", "<cmd>Gitsigns stage_hunk<cr>", desc = "stage hunk", mode = "n" },
 			{ "<leader>ghr", "<cmd>Gitsigns reset_hunk<cr>", desc = "reset_hunk", mode = "n" },
 		},
 	},
