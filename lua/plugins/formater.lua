@@ -12,6 +12,7 @@ return {
 				"ruff_organize_imports",
 			},
 			toml = { "pyproject-fmt" },
+			yaml = { "yamlfmt" },
 		},
 	},
 }
