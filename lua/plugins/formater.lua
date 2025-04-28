@@ -11,6 +11,7 @@ return {
 				-- To organize the imports.
 				"ruff_organize_imports",
 			},
+			toml = { "pyproject-fmt" },
 		},
 	},
 }
