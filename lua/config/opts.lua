@@ -26,3 +26,7 @@ vim.diagnostic.config({
 -- recommended by nvim-tree
 vim.g.loaded_netrw = 1
 vim.g.loaded_netrwPlugin = 1
+
+-- turn on spell check. I absolutely need this :(
+vim.opt_local.spell = true
+vim.opt_local.spelllang = { "en_gb" }
