@@ -38,6 +38,7 @@ return {
 			{ "<leader>ghp", "<cmd>Gitsigns nav_hunk prev<cr>", desc = "previous hunk", mode = "n" },
 			{ "<leader>gha", "<cmd>Gitsigns stage_hunk<cr>", desc = "stage hunk", mode = "n" },
 			{ "<leader>ghr", "<cmd>Gitsigns reset_hunk<cr>", desc = "reset_hunk", mode = "n" },
+			{ "<leader>c", "<cmd>TodoQuickFix<cr>", desc = "comments", mode = "n" },
 		},
 	},
 	keys = {
