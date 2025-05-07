@@ -12,6 +12,9 @@ vim.opt.ignorecase = true
 -- highlight present line
 vim.opt.cursorline = true
 
+-- Minimal number of screen lines to keep above and below the cursor.
+vim.opt.scrolloff = 10
+
 -- activate true colour support
 vim.opt.termguicolors = true
 
