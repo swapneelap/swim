@@ -1,5 +1,6 @@
 return {
 	"williamboman/mason-lspconfig.nvim",
+	version = "1.*",
 	dependencies = { "williamboman/mason.nvim" },
 	config = function()
 		require("mason-lspconfig").setup()
