@@ -33,3 +33,12 @@ vim.g.loaded_netrwPlugin = 1
 -- turn on spell check. I absolutely need this :(
 vim.opt_local.spell = true
 vim.opt_local.spelllang = { "en_gb" }
+
+-- folding options
+vim.opt.foldmethod = "expr"
+vim.opt.foldexpr = "v:lua.vim.treesitter.foldexpr()"
+
+vim.opt.foldtext = ""
+
+vim.opt.foldlevel = 99
+vim.opt.foldlevelstart = 1
