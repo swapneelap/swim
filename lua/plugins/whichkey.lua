@@ -40,7 +40,6 @@ return {
 			{ "<leader>gu", "<cmd>Gitsigns undo_stage_hunk<cr>", desc = "undo stage hunk", mode = "n" },
 			{ "<leader>gr", "<cmd>Gitsigns reset_hunk<cr>", desc = "reset hunk", mode = "n" },
 			{ "<leader>c", "<cmd>TodoQuickFix<cr>", desc = "comments", mode = "n" },
-			{ "gd", "<cmd>tjump<cr>", desc = "jump to definition", mode = "n" },
 		},
 	},
 	keys = {
