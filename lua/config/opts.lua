@@ -42,3 +42,17 @@ vim.opt.foldtext = ""
 
 vim.opt.foldlevel = 99
 vim.opt.foldlevelstart = 1
+
+--------------------------------------------------------------------
+---------------------- Auto Commands -------------------------------
+--------------------------------------------------------------------
+
+vim.api.nvim_create_autocmd({ "BufReadPost" }, {
+	pattern = { "*" },
+	callback = function()
+		if vim.fn.line("'\"") > 1 and vim.fn.line("'\"") <= vim.fn.line("$") then
+			vim.api.nvim_exec("normal! g'\"", false)
+		end
+	end,
+	desc = "Start the session from where it ended.",
+})
