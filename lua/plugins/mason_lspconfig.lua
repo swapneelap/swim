@@ -7,11 +7,11 @@ return {
 			settings = {
 				pylsp = {
 					plugins = {
-						pycodestyle = { enable = false },
+						pycodestyle = { enabled = false },
 						pyflakes = { enabled = false },
 						mccabe = { enabled = false },
 						flake8 = { enabled = false },
-						pylint = { enable = false },
+						pylint = { enabled = false },
 					},
 				},
 			},
