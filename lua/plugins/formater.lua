@@ -14,6 +14,7 @@ return {
 			toml = { "pyproject-fmt" },
 			yaml = { "yamlfmt" },
 			tex = { "tex-fmt" },
+			rust = {"rustfmt"},
 		},
 	},
 }
