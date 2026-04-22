@@ -1,65 +1,36 @@
 return {
-	"neovim-treesitter/nvim-treesitter",
-	dependencies = { 'neovim-treesitter/treesitter-parser-registry' },
+	"nvim-treesitter/nvim-treesitter",
+	branch = "main",
+	lazy = false, -- REQUIRED: The rewrite must be loaded early to register commands
 	build = ":TSUpdate",
-	-- event = "VeryLazy",
-	lazy = false, -- load treesitter early when opening a file from the cmdline
-	-- init = function(plugin)
-	-- 	-- PERF: add nvim-treesitter queries to the rtp and it's custom query predicates early
-	-- 	-- This is needed because a bunch of plugins no longer `require("nvim-treesitter")`, which
-	-- 	-- no longer trigger the **nvim-treesitter** module to be loaded in time.
-	-- 	-- Luckily, the only things that those plugins need are the custom queries, which we make available
-	-- 	-- during startup.
-	-- 	require("lazy.core.loader").add_to_rtp(plugin)
-	-- 	require("nvim-treesitter.query_predicates")
-	-- end,
-	cmd = { "TSUpdateSync", "TSUpdate", "TSInstall" },
-	opts = {
-		highlight = { enable = true },
-		indent = { enable = true },
-		ensure_installed = {
-			"bash",
-			"c",
-			"diff",
-			"html",
-			"javascript",
-			"jsdoc",
-			"json",
-			"jsonc",
-			"latex",
+	config = function()
+		local ts = require("nvim-treesitter")
+
+		-- 1. Pre-install your core languages
+		ts.install({
 			"lua",
-			"luadoc",
-			"luap",
-			"markdown",
-			"markdown_inline",
-			"printf",
 			"python",
-			"query",
-			"regex",
-			"toml",
-			"tsx",
-			"typescript",
-			"vim",
-			"vimdoc",
-			"xml",
-			"yaml",
-		},
-		auto_install = true,
-		incremental_selection = {
-			enable = true,
-			keymaps = {
-				init_selection = "<C-space>",
-				node_incremental = "<C-space>",
-				scope_incremental = "<C-s>",
-				node_decremental = "<bs>",
-			},
-		},
-	},
-	-- NOTE: unfortunately contrary to documentation on lazy.nvim:
-	-- https://lazy.folke.io/developers#best-practices,
-	-- one need to explicitly call the treesitter startup function
-	-- for the options to take effect!
-	-- config = function(_, opts)
-	-- 	require("nvim-treesitter.configs").setup(opts)
-	-- end,
+			"rust",
+			"bash",
+			"markdown",
+		})
+
+		-- 2. Create an autocommand for highlighting
+		vim.api.nvim_create_autocmd("FileType", {
+			callback = function(args)
+				local bufnr = args.buf
+				local ft = vim.bo[bufnr].filetype
+
+				-- Use pcall to ignore errors for filetypes without parsers (like 'noice')
+				pcall(vim.treesitter.start, bufnr, ft)
+			end,
+		})
+
+		-- 3. Enable Indentation (Optional, now manual on main branch)
+		vim.api.nvim_create_autocmd("FileType", {
+			callback = function()
+				vim.bo.indentexpr = "v:lua.require'nvim-treesitter'.indentexpr()"
+			end,
+		})
+	end,
 }
