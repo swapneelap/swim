@@ -13,6 +13,8 @@ return {
 			"rust",
 			"bash",
 			"markdown",
+			"diff",
+			"gitcommit",
 		})
 
 		-- 2. Create an autocommand for highlighting
