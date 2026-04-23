@@ -34,6 +34,9 @@ vim.g.loaded_netrwPlugin = 1
 vim.opt_local.spell = true
 vim.opt_local.spelllang = { "en_gb" }
 
+-- turn on smooth scrolling
+vim.opt.smoothscroll = true
+
 --------------------------------------------------------------------
 ---------------------- Auto Commands -------------------------------
 --------------------------------------------------------------------
