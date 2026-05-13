@@ -17,12 +17,6 @@ return {
 			},
 			{ "<leader>b", desc = "buffer options", mode = "n" },
 			{
-				"<leader>bd",
-				"<cmd>lua require('lsp_lines').toggle()<cr>",
-				desc = "display diagnostics",
-				mode = "n",
-			},
-			{
 				"<leader>bf",
 				"<cmd>lua require('conform').format()<cr>",
 				desc = "format file",
